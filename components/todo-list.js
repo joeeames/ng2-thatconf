@@ -1,16 +1,13 @@
-import {Component, View, For, If, EventEmitter} from 'angular2/angular2';
-import {Inject, bind} from 'angular2/di';
-import {todoItems} from 'services/todoItems';
+import {Component, View, NgFor, NgIf, EventEmitter} from 'angular2/angular2';
+import {Inject} from 'angular2/di';
+
 
 @Component({
-	selector: 'todo-list',
-  injectables: [
-    bind('todoItems').toValue(todoItems)
-  ]
+	selector: 'todo-list'
 })
 @View({
 	templateUrl: 'components/todo-list.html',
-	directives: [For, If]
+	directives: [NgFor, NgIf]
 })
 export class TodoList {
   constructor(@Inject('todoItems') todoItems) {
