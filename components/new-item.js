@@ -1,12 +1,8 @@
 import {Component, View} from 'angular2/angular2';
 import {Inject, bind} from 'angular2/di';
-import {todoItems} from 'services/todoItems';
 
 @Component({
-	selector: 'new-item',
-  injectables: [
-    bind('todoItems').toValue(todoItems)
-  ]
+	selector: 'new-item'
 })
 @View({
 	templateUrl: 'components/new-item.html'
