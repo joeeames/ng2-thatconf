@@ -1,11 +1,12 @@
-import {Component, View} from 'angular2/angular2';
+import {Component, View, formDirectives} from 'angular2/angular2';
 import {Inject, bind} from 'angular2/di';
 
 @Component({
 	selector: 'new-item'
 })
 @View({
-	templateUrl: 'components/new-item.html'
+	templateUrl: 'components/new-item.html',
+	directives: [formDirectives]
 })
 export class NewItem {
 	constructor(@Inject('todoItems') todoItemList) {

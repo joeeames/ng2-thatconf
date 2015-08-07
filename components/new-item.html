@@ -1,7 +1,9 @@
 <div class="form-inline">
 	<div class="form-group">
 		<label for="description">New Item</label>
-		<input id="description" class="form-control" #desc (keyup)="keyPressed($event, desc)">
+    <input id="description" class="form-control" #desc [(ng-model)]="newValue" (keyup)="keyPressed($event, desc)">
+    <br>
+    {{newValue}}
 	</div>
 	<button class="btn btn-primary" type="button" (click)="addItem(desc)">Add Item</button>
 </div>
